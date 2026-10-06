@@ -5,12 +5,274 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>RAJIV R PANDEY | Writer</title>
+    <title>Rajiv R Pandey | Writer</title>
 
     <style>
         body {
             margin: 0;
             font-family: Georgia, serif;
+            background: #f5f1ea;
             color: #292522;
         }
-            
+
+        header {
+            background: #292522;
+            color: white;
+            padding: 30px 10%;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #d8d0c5;
+        }
+
+        nav {
+            margin-top: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            padding: 100px 10%;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 13px 28px;
+            background: #292522;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background: #55504b;
+        }
+
+        section {
+            padding: 70px 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            width: 260px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 23px;
+        }
+
+        .card p {
+            line-height: 1.7;
+        }
+
+        #about {
+            background: #e9e2d8;
+        }
+
+        .about-text {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        #contact {
+            text-align: center;
+        }
+
+        footer {
+            background: #292522;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            .hero {
+                padding: 70px 7%;
+            }
+
+            section {
+                padding: 55px 7%;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Rajiv R Pandey</h1>
+
+        <p>
+            Words that question. Stories that remember. Thoughts that matter.
+        </p>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#writing">Writing</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <section class="hero" id="home">
+
+        <h2>Welcome to My World of Words</h2>
+
+        <p>
+            I write poems, short stories and reflections inspired
+            by everyday life, human experiences and the issues
+            we often see around us.
+        </p>
+
+        <a class="button" href="#writing">
+            Explore My Writing
+        </a>
+
+    </section>
+
+
+    <section id="writing">
+
+        <h2>My Writing</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Poetry</h3>
+
+                <p>
+                    Poems about emotions, life, people,
+                    memories and the world around us.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>Short Stories</h3>
+
+                <p>
+                    Fictional stories inspired by ordinary
+                    people and extraordinary moments.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <h3>Social Reflections</h3>
+
+                <p>
+                    Thoughts and writings about society,
+                    culture and the issues that affect us.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p class="about-text">
+            I am a writer who enjoys observing people,
+            society and the small moments of everyday life.
+            Through poetry, stories and essays, I try to
+            explore ideas that deserve to be noticed and discussed.
+        </p>
+
+    </section>
+
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+            If you would like to read, discuss or collaborate,
+            you can get in touch with me.
+        </p>
+
+    </section>
+
+
+    <footer>
+
+        <p>© 2026 Rajiv R Pandey. All rights reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
