@@ -8,163 +8,257 @@
     <title>Rajiv R Pandey | Writer</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Georgia, serif;
-            background: #f5f1ea;
-            color: #292522;
+        * {
+            box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            background: #f7f3ec;
+            color: #292522;
+            line-height: 1.7;
+        }
+
+        /* ---------- HEADER ---------- */
+
         header {
-            background: #292522;
+            background: #24211f;
             color: white;
-            padding: 30px 10%;
             text-align: center;
+            padding: 32px 20px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 42px;
+            font-size: clamp(32px, 6vw, 48px);
+            letter-spacing: 1px;
         }
 
         header p {
-            font-size: 18px;
+            margin: 8px 0 22px;
             color: #d8d0c5;
+            font-size: 17px;
         }
 
         nav {
-            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 12px;
-            font-size: 16px;
+            padding: 7px 13px;
+            border-radius: 4px;
+            transition: background 0.2s ease;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            background: #514b45;
         }
 
+
+        /* ---------- HERO ---------- */
+
         .hero {
-            padding: 100px 10%;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            padding: 80px 20px;
         }
 
         .hero h2 {
-            font-size: 45px;
-            margin-bottom: 20px;
+            max-width: 850px;
+            margin: 0 0 25px;
+            font-size: clamp(38px, 7vw, 64px);
+            line-height: 1.15;
+            font-weight: normal;
         }
 
         .hero p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 20px;
-            line-height: 1.8;
+            max-width: 680px;
+            margin: 0;
+            font-size: clamp(18px, 2.5vw, 21px);
+            color: #5d5751;
         }
 
         .button {
             display: inline-block;
             margin-top: 30px;
-            padding: 13px 28px;
+            padding: 12px 24px;
             background: #292522;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            transition: transform 0.2s ease, background 0.2s ease;
         }
 
         .button:hover {
-            background: #55504b;
+            background: #514b45;
+            transform: translateY(-2px);
         }
 
+
+        /* ---------- SECTIONS ---------- */
+
         section {
-            padding: 70px 10%;
+            padding: 80px 20px;
         }
 
         section h2 {
             text-align: center;
-            font-size: 32px;
-            margin-bottom: 40px;
+            font-size: clamp(30px, 5vw, 40px);
+            font-weight: normal;
+            margin: 0 0 45px;
         }
 
+
+        /* ---------- WRITING CARDS ---------- */
+
         .cards {
-            display: flex;
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
         .card {
-            background: white;
-            padding: 28px;
-            width: 260px;
+            background: #ffffff;
+            padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5ded4;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
         }
 
         .card h3 {
             margin-top: 0;
-            font-size: 23px;
+            font-size: 25px;
+            font-weight: normal;
         }
 
         .card p {
-            line-height: 1.7;
+            color: #625c55;
         }
 
+        .card .button {
+            margin-top: 10px;
+        }
+
+
+        /* ---------- ABOUT ---------- */
+
         #about {
-            background: #e9e2d8;
+            background: #ebe4da;
         }
 
         .about-text {
-            max-width: 700px;
+            max-width: 720px;
             margin: auto;
             text-align: center;
-            line-height: 1.8;
-            font-size: 18px;
+            font-size: 19px;
+            color: #514b45;
         }
+
+
+        /* ---------- CONTACT ---------- */
 
         #contact {
             text-align: center;
         }
 
+        .contact-text {
+            max-width: 600px;
+            margin: auto;
+            color: #5d5751;
+            font-size: 18px;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
         footer {
-            background: #292522;
-            color: white;
+            background: #24211f;
+            color: #d8d0c5;
             text-align: center;
-            padding: 30px;
+            padding: 28px 20px;
+            font-size: 14px;
         }
 
-        footer p {
-            margin: 0;
-        }
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 32px;
-            }
+        /* ---------- MOBILE ---------- */
 
-            .hero h2 {
-                font-size: 34px;
-            }
+        @media (max-width: 750px) {
 
             .hero {
-                padding: 70px 7%;
+                min-height: 60vh;
+                padding: 70px 20px;
             }
 
             section {
-                padding: 55px 7%;
+                padding: 65px 20px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            nav {
+                gap: 3px;
             }
 
             nav a {
-                display: inline-block;
-                margin: 6px;
+                font-size: 15px;
+            }
+        }
+
+
+        @media (max-width: 400px) {
+
+            header {
+                padding: 27px 15px;
+            }
+
+            .hero {
+                padding: 60px 16px;
+            }
+
+            section {
+                padding: 55px 16px;
+            }
+
+            .button {
+                padding: 11px 20px;
             }
         }
     </style>
 </head>
 
+
 <body>
+
+    <!-- HEADER -->
 
     <header>
 
@@ -184,14 +278,17 @@
     </header>
 
 
+    <!-- HERO -->
+
     <section class="hero" id="home">
 
-        <h2>Welcome to My World of Words</h2>
+        <h2>
+            Welcome to My World of Words
+        </h2>
 
         <p>
-            I write poems, short stories and reflections inspired
-            by everyday life, human experiences and the issues
-            we often see around us.
+            Poems, stories and reflections inspired by life,
+            people and the questions we often leave unspoken.
         </p>
 
         <a class="button" href="#writing">
@@ -201,48 +298,65 @@
     </section>
 
 
+    <!-- WRITING -->
+
     <section id="writing">
 
         <h2>My Writing</h2>
 
-<div class="card">
+        <div class="cards">
 
-    <h3>Poetry</h3>
-
-    <p>
-        Poems about life, emotions, memory,
-        people and the world around us.
-    </p>
-
-    <a class="button" href="poetry.html">
-        Read Poetry →
-    </a>
-
-</div>
+            <!-- Poetry -->
 
             <div class="card">
-                <h3>Short Stories</h3>
+
+                <h3>Poetry</h3>
 
                 <p>
-                    Fictional stories inspired by ordinary
-                    people and extraordinary moments.
+                    Poems about life, emotions, memory,
+                    people and the world around us.
                 </p>
+
+                <a class="button" href="poetry.html">
+                    Read Poetry →
+                </a>
+
             </div>
 
 
+            <!-- Short Stories -->
+
             <div class="card">
+
+                <h3>Short Stories</h3>
+
+                <p>
+                    Stories inspired by ordinary people,
+                    extraordinary moments and human experience.
+                </p>
+
+            </div>
+
+
+            <!-- Social Reflections -->
+
+            <div class="card">
+
                 <h3>Social Reflections</h3>
 
                 <p>
-                    Thoughts and writings about society,
-                    culture and the issues that affect us.
+                    Essays and reflections about society,
+                    culture and the questions that affect us.
                 </p>
+
             </div>
 
         </div>
 
     </section>
 
+
+    <!-- ABOUT -->
 
     <section id="about">
 
@@ -258,11 +372,13 @@
     </section>
 
 
+    <!-- CONTACT -->
+
     <section id="contact">
 
         <h2>Contact</h2>
 
-        <p>
+        <p class="contact-text">
             If you would like to read, discuss or collaborate,
             you can get in touch with me.
         </p>
@@ -270,9 +386,13 @@
     </section>
 
 
+    <!-- FOOTER -->
+
     <footer>
 
-        <p>© 2026 Rajiv R Pandey. All rights reserved.</p>
+        <p>
+            © 2026 Rajiv R Pandey. All rights reserved.
+        </p>
 
     </footer>
 
